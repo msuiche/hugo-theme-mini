@@ -1,3 +1,10 @@
+{{ if eq .Page.Params.figure_style "rlvr" }}
+<figure class="rlvr-figure">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" {{ with .Title}} title="{{ . }}"{{ end }} />
+  <figcaption>{{ .Text }}</figcaption>
+</figure>
+{{ else }}
 <p class="markdown-image">
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
 </p>
+{{ end }}
