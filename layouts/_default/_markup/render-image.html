@@ -1,6 +1,6 @@
 {{ if eq .Page.Params.figure_style "rlvr" }}
 <figure class="rlvr-figure">
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" {{ with .Title}} title="{{ . }}"{{ end }} />
+  <div class="rlvr-figure-media"><img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" {{ with .Title}} title="{{ . }}"{{ end }} /></div>
   <figcaption>{{ .Text }}</figcaption>
 </figure>
 {{ else }}
